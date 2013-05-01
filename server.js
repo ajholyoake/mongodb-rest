@@ -51,5 +51,5 @@ require('./lib/command');
 require('./lib/rest');
 
 if(!process.argv[2] || !process.argv[2].indexOf("expresso")) {
-  app.listen(config.server.port, config.server.address);
+  app.listen(process.env.PORT, config.server.address);
 }
