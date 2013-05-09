@@ -1,2 +1,5 @@
 .DS_Store
 .*.swp
+iisnode/*
+server.js.debug/*
+node_modules/*

@@ -15,10 +15,10 @@ var config = { "db": {
   'port': 27017,
   'host': "localhost"
   },
-  'server': {
-    'port': 3000,
-    'address': "0.0.0.0"
-  },
+    'server':{
+      'port': 3000,
+      'address': "0.0.0.0"
+    },
   'flavor': "regular",
   'debug': true
 };
@@ -51,5 +51,5 @@ require('./lib/command');
 require('./lib/rest');
 
 if(!process.argv[2] || !process.argv[2].indexOf("expresso")) {
-  app.listen(process.env.PORT, config.server.address);
+  app.listen(process.env.port || 3000,config.server.address);
 }
